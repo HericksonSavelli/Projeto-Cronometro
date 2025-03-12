@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+</head>
+
+<body>
+    <img src="./Assets/71b6db7185dfc25bb9fab870a37863a0-icone-de-cronometro.webp" alt="">
+    <h1>Cronometro <br> DevClub</h1>
+    <h2>0</h2>
+    <div>
+    <button class="start" onclick="start()">Start</button>
+    <button class="stop" onclick="stop()">Stop</button>
+    <button class="reset" onclick="reset()">Reset</button>
+    </div>
+</body>
+
+<style>
+    *{
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #636060;
+        color: white;
+        text-align: center;
+    }
+img{
+     width: 200px;
+      
+}
+div{
+    margin-top: 30px;
+}
+h1, h2{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    margin-left: 20px;
+    padding: 05px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-top: 30px;
+    font-size: 25px ;
+    font-weight: 100;
+}
+
+.start{
+    background-color: green;
+}
+.stop{
+    background-color: red;
+}
+.reset{
+    background-color: blue;
+}
+
+</style>
+
+<script>
+    /*
+        setTimeout -> Executa um vez
+        setInterval -> Excuta infinita vezes
+        clearInterval -> vai pausar o setInverval
+    */
+
+    let number = 0
+    let Cron
+    let h2 = document.querySelector('h2')
+
+    function start() {
+        cron = setInterval(function () {
+            number++
+            h2.innerHTML = number
+        }, 1000);
+    }
+    function stop(){
+        clearInterval(cron)
+    }
+    function reset(){
+        h2.innerHTML = (number=0)
+    }
+    
+</script>
+
+</html>
