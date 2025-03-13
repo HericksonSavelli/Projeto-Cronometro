@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #636060;
+    color: white;
+    text-align: center;
+}
+
+img {
+    width: 200px;
+
+}
+
+div {
+    margin-top: 30px;
+}
+
+span {
+    font-size: 40px;
+
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin-left: 20px;
+    padding: 05px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-top: 30px;
+    font-size: 25px;
+    font-weight: 100;
+}
+button:hover {
+  opacity: 0.8;
+}
+button:active {
+  opacity: 0.6;
+}
+.start {
+    background-color: green;
+}
+
+.pause {
+    background-color: red;
+}
+
+.reset {
+    background-color: blue;
+}
